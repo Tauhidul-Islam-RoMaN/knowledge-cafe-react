@@ -9,16 +9,16 @@ const Bookmarks = ({bookmarks,readingTime}) => {
             </div>
             <h2 className="text-3xl">Bookmarked Blogs: {bookmarks.length}</h2>
             {
-                bookmarks.map(bookmark => <Bookmark
+                bookmarks.map((bookmark,index) => <Bookmark
+                    key={index}
                     bookmark={bookmark}
-                    key={bookmark.id}
                 ></Bookmark>)
             }
         </div>
     );
 };
 Bookmarks.propTypes = {
-    bookmarks: PropTypes.object.isRequired,
+    bookmarks: PropTypes.array.isRequired,
     readingTime: PropTypes.number.isRequired
 }
 
