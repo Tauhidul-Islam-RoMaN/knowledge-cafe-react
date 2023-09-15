@@ -18,7 +18,7 @@ function App() {
     setReadingTime(readingTime + time);
     //remove th read blog from bookmark
     console.log('remove bookmark' , id);
-    const remainingBookmark = bookmarks.filter(bookmark => bookmark.id!===id)
+    const remainingBookmark = bookmarks.filter(bookmark => bookmark.id!==id)
     setBookmarks(remainingBookmark)
   }
 
